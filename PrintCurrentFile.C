@@ -17,7 +17,7 @@ int main(void)
 		if (ch == EOF)
 			break;
 		printf("%c", ch);
-	}
+	} 
 	printf("\n");
 	fclose(fp);
 	getch();
