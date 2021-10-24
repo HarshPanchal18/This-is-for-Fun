@@ -5,7 +5,7 @@ int main(void)
 {
 	FILE *fp;
 	char ch;
-	fp = fopen("counter.c", "r");
+	fp = fopen("PrintCurrentFile.c", "r");
 	if (fp == NULL)
 	{
 		printf("Cannot open file");
