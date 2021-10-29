@@ -12,7 +12,7 @@ int main(void)
 		float s;
 	} e;
 
-	fp = fopen("emp.txt", "rb");
+	fp = fopen("Emp.txt", "r");
 	if (fp == NULL)
 	{
 		puts("Unable to open");
@@ -20,11 +20,10 @@ int main(void)
 	}
 	while (fread(&e, sizeof(e), 1, fp) == 1)
 	{
-		printf("%s %d %.2f\n", e.name, e.age, e.s);
 		count++;
+		printf("%d\t%8s %2d %.2f\n", count, e.name, e.age, e.s);
 	}
 	if (count == 0)
-		printf("\nThe File has no conent..");
+		printf("\nThe File has no content..");
 	fclose(fp);
-	getch();
 }
