@@ -11,11 +11,16 @@ int main(void)
 		int age;
 		float s;
 	} e;
-	fp = fopen("emp.txt", "wb");
+	fp = fopen("Emp.txt", "a");
 	if (fp == NULL)
 	{
-		puts("Unable to open file");
-		exit(0);
+		fp = fopen("Emp.txt", "wb+");
+
+		if (fp == NULL)
+		{
+			puts("Cannot open file");
+			exit(1);
+		}
 	}
 	while (another == 'y' || another == 'Y')
 	{
