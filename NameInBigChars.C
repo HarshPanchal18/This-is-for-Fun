@@ -170,6 +170,6 @@ int main()
 			z();
 		i++;
 	}
-	system("pause");
+	system("pause"); 
 	return 0;
 }
