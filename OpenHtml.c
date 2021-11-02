@@ -3,5 +3,5 @@
 
 int main(void)
 {
-    system("D:\\HTML_file\\user_pass.html");
+    system("D:\\HTML_file\\user_pass.html"); // put "file.html" only if file is in current directory 
 }
