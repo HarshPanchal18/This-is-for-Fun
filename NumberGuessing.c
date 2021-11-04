@@ -24,8 +24,14 @@ int main(void)
         }
         if (flag == 1)
         {
-            printf("\nSorry !! Guess it again\n");
+            printf("\nSorry !! Guess it again\nPress -1 for give up\n");
             scanf("%d", &guess);
+            if (guess == -1)
+            {
+                printf("\nThe number was %d", no);
+                printf("\nNice Try...\n");
+                exit(0);
+            }
         }
     } while (flag);
 
