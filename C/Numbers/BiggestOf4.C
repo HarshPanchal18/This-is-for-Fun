@@ -10,6 +10,7 @@ int main()
         f1 = n1;
     else
         f1 = n4;
+    
     if (n2 > n3)
         f2 = n2;
     else
