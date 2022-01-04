@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <conio.h>
 #include <stdlib.h>
+
 int main(void)
 {
 	FILE *fp;
 	char ch;
-	fp = fopen("PrintCurrentFile.c", "r");
+	fp = fopen("PrintCurrentFile.c", "r");  
+	//fp = fopen(__FILE__, "r");
 	if (fp == NULL)
 	{
 		printf("Cannot open file");
@@ -22,3 +24,4 @@ int main(void)
 	fclose(fp);
 	getch();
 }
+//Terminated...		
