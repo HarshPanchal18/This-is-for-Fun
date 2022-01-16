@@ -14,33 +14,32 @@ void Sort(char q[][20], int n)
         for (j = i + 1; j < n; j++)
             if (strcmpi(l, q[j]) > 0) // put  <  for descending order
                 strcpy(l, q[j]), p = j;
+        
         strcpy(t, q[i]);
         strcpy(q[i], q[p]);
         strcpy(q[p], t);
     }
 }
+
 int main(void)
 {
-    // clrscr();
     cout << "\n\n_______________________________________________________________________\n";
     cout << "     Arranging Array of Names in Descending order using selection sort\n";
     cout << "_________________________________________________________________________";
-    int n, i;
-    char a[6][20];
+ 
+    int n;
     cout << "\n\n\n\n\n Enter the size of array =\t";
     cin >> n;
-    if (n > 6)
-        n = 6;
+    
+    char a[n][20];
     cout << "\n Enter all the values of the array:\n";
-    for (i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++)
         cin >> a[i];
-    }
+    
     Sort(a, n);
+    
     cout << "\n Sorted Array :-\n";
-    for (i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++)
         cout << endl
              << "\t\t" << a[i];
-    }
 }
