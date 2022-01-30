@@ -8,17 +8,17 @@ int Anagram(char s1[], char s2[])
     int i = 0;
     while (s1[i] != '\0')
     {
-        first[s1[i]]++;
+        first[s1[i]-'a']++;
         i++;
     }
     i = 0;
     while (s2[i] != '\0')
     {
-        second[s2[i]]++;
+        second[s2[i]-'a']++;
         i++;
     }
 
-    for (i = 0; i < 256; i++)
+    for (i = 0; i < 26; i++)
         if (first[i] != second[i])
             return 0;
     return 1;
