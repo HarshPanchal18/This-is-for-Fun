@@ -44,9 +44,36 @@ int superPrimes(int n)
     return res;
 }
 
+int superPrimes2(int n)
+{
+    int res = 0;
+    int vis[n + 1];
+
+    for (int i = 0; i < n + 1; i++)
+        vis[i] = 0;
+
+    vis[0] = vis[1] = 1;
+
+    for (int i = 2; i <= sqrt(n); i++)
+    {
+        if (vis[i])
+            continue;
+
+        for (int j = i * i; j <= n; j += i)
+            vis[j] = 1;
+    }
+
+    for (int i = 3; i <= n; i++)
+        if (vis[i] == 0 && vis[i - 2] == 0)
+            res++;
+
+    return res;
+}
+
 int main(void)
 {
     int n;
     scanf("%d", &n);
     printf("%d\n", superPrimes(n));
+    printf("%d\n", superPrimes2(n));
 }
