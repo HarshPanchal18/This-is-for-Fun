@@ -25,3 +25,41 @@ void Fill(int i, int j, char dot, char color, char matrix[][100], int n, int m)
     Fill(i, j + 1, dot, color, matrix, n, m); // after last iteration (Second Column), print remaining columns till the 'M'.
     Fill(i, j - 1, dot, color, matrix, n, m); // print first column
 }
+
+int main(void)
+{
+    int n, m;
+    char matrix[100][100];
+
+    cout << "\nEnter Row and Column: ";
+    cin >> n >> m;
+
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < m; j++)
+            cin >> matrix[i][j];
+
+    cout << "\nYour Matrix:\n";
+    PrintMat(matrix, n, m);
+
+    Fill(0, 0, '.', 'R', matrix, n, m);
+
+    cout << "\nYour Coloured Matrix:\n";
+    PrintMat(matrix, n, m);
+}
+
+/*
+Enter Row and Column: 3 3
+. . .
+. T .
+. . .
+
+Your Matrix:
+ . . .
+ . T .
+ . . .
+
+Your Coloured Matrix:
+ R R R
+ R T R
+ R R R
+*/
